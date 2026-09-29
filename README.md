@@ -24,6 +24,7 @@ HTMLは直接編集し、ページを増やすときは `public/` に追加し�
 
 チャンネル：[理工の補講 / @hinamimi09](https://www.youtube.com/@hinamimi09)。
 全ページのヘッダーとフッター、トップの紹介から移動できます。
+ニコニコ動画：[シリーズ](https://www.nicovideo.jp/user/51952754/series/580080)。全ページのヘッダーとフッターに配置。
 
 - `public/assets/branding/icon.png`：既存のアイコンv1。ヘッダー・紹介欄で使用。
 - `public/assets/branding/banner.png`：既存のバナーv2。トップ上部で使用。
@@ -46,6 +47,7 @@ CSSでリンク先を判定するため、動画URL更新後も自動で表示�
 | --- | --- | --- |
 | 複素インピーダンス | `public/videos/complex-impedance/index.html` | 5場面 |
 | 集中定数回路 | `public/videos/lumped-circuit/index.html` | 6場面 |
+| GND・帰線・アース | `public/videos/gnd-return-earth/index.html` | 6場面・YouTube埋め込み |
 
 トップの動画一覧から各ページへ移動できます。各ページの `images/` に図解画像を置き、
 HTMLに短い説明・代替テキスト・目次を直接記述しています。画像を選ぶと拡大表示します。
@@ -57,12 +59,15 @@ HTMLに短い説明・代替テキスト・目次を直接記述しています�
 [YouTube動画](https://www.youtube.com/shorts/DsIEvbgxioI)を埋め込み済みです。
 2026-09-27、集中定数回路にもユーザー提供の
 [YouTube動画](https://www.youtube.com/shorts/9BAfsqTt8M8)を埋め込みました。
+2026-09-30、GND・帰線・アースにユーザー指定の予定URL
+https://youtube.com/shorts/RtR0ZcnU_Rw を設定しました。公開・再生可否は未確認です。
 動画URLを変更するときは、このリポジトリのルートから次を実行します。
 `YOUTUBE_URL` は対象動画の実際のURLへ置き換えてください。
 
 ```bash
 python3 scripts/set_youtube.py complex-impedance 'YOUTUBE_URL'
 python3 scripts/set_youtube.py lumped-circuit 'YOUTUBE_URL'
+python3 scripts/set_youtube.py gnd-return-earth 'YOUTUBE_URL'
 ```
 
 `watch?v=...`、`shorts/...`、`youtu.be/...` を受け付けます。
