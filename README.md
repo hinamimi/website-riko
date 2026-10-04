@@ -48,12 +48,16 @@ CSSでリンク先を判定するため、動画URL更新後も自動で表示�
 | 複素インピーダンス | `public/videos/complex-impedance/index.html` | 5場面 |
 | 集中定数回路 | `public/videos/lumped-circuit/index.html` | 6場面 |
 | GND・帰線・アース | `public/videos/gnd-return-earth/index.html` | 6場面・YouTube埋め込み |
+| LEDと太陽電池 | `public/videos/led-solar-duality/index.html` | 6場面・アップロード準備中 |
 
 トップの動画一覧から各ページへ移動できます。各ページの `images/` に図解画像を置き、
 HTMLに短い説明・代替テキスト・目次を直接記述しています。画像を選ぶと拡大表示します。
 ページ・要約の表示にはJavaScriptを使いません。
 
 ### YouTubeの登録
+
+LED動画のURLが決まったら、`python3 scripts/set_youtube.py led-solar-duality '実際のURL'` で
+準備中のサムネイル表示を静的iframeと直接リンクへ置き換えられる。
 
 2026-09-26、複素インピーダンスにユーザー提供の
 [YouTube動画](https://www.youtube.com/shorts/DsIEvbgxioI)を埋め込み済みです。
