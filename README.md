@@ -49,6 +49,7 @@ CSSでリンク先を判定するため、動画URL更新後も自動で表示�
 | 集中定数回路 | `public/videos/lumped-circuit/index.html` | 6場面 |
 | GND・帰線・アース | `public/videos/gnd-return-earth/index.html` | 6場面・YouTube埋め込み |
 | LEDと太陽電池 | `public/videos/led-solar-duality/index.html` | 6場面・アップロード準備中 |
+| 電流と電圧 | `public/videos/current-voltage-electrons/index.html` | 6場面・YouTube埋め込み |
 
 トップの動画一覧から各ページへ移動できます。各ページの `images/` に図解画像を置き、
 HTMLに短い説明・代替テキスト・目次を直接記述しています。画像を選ぶと拡大表示します。
@@ -56,8 +57,13 @@ HTMLに短い説明・代替テキスト・目次を直接記述しています�
 
 ### YouTubeの登録
 
-LED動画のURLが決まったら、`python3 scripts/set_youtube.py led-solar-duality '実際のURL'` で
-準備中のサムネイル表示を静的iframeと直接リンクへ置き換えられる。
+準備中の動画は、実際のYouTube URLを受領したら次のコマンドで
+サムネイル表示を静的iframeと直接リンクへ置き換えられる。
+
+```bash
+python3 scripts/set_youtube.py led-solar-duality '実際のURL'
+python3 scripts/set_youtube.py current-voltage-electrons '実際のURL'
+```
 
 2026-09-26、複素インピーダンスにユーザー提供の
 [YouTube動画](https://www.youtube.com/shorts/DsIEvbgxioI)を埋め込み済みです。
@@ -86,7 +92,7 @@ HTMLへiframeとYouTubeへの直接リンクを書き込みます。ランタイ
 `scripts/set_youtube.py` の `choices` に新しいディレクトリ名も追加してください。
 
 画像の出典は制作プロジェクトの現行納品動画です。
-複素インピーダンスはshort-v2、集中定数回路は改訂29から抽出しています。
+複素インピーダンスはshort-v2、集中定数回路は改訂29、電流と電圧は文言・回路直結v18から抽出しています。
 切り出し時刻・元動画のハッシュは、制作プロジェクトの `docs/github-pages.md` に記録しています。
 
 埋め込み仕様： [YouTube公式プレーヤー仕様](https://developers.google.com/youtube/player_parameters)、

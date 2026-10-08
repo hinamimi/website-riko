@@ -54,7 +54,7 @@ def insert_embed(page: Path, url: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('slug', choices=['complex-impedance', 'lumped-circuit', 'gnd-return-earth', 'led-solar-duality'])
+    parser.add_argument('slug', choices=['complex-impedance', 'lumped-circuit', 'gnd-return-earth', 'led-solar-duality', 'current-voltage-electrons'])
     parser.add_argument('url', help='YouTube watch / shorts / youtu.be URL')
     args = parser.parse_args()
     try:
